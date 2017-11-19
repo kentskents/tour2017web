@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @cat.kind %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @cat.sex %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @cat.age %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @cat.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @cat.color %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @cat.place %>
+</p>
+
+<p>
+  <strong>Limit:</strong>
+  <%= @cat.limit %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @cat.detail %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @cat.image %>
+</p>
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>
