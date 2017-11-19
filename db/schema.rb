@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119131631) do
+ActiveRecord::Schema.define(version: 20171119134424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,4 +29,13 @@ ActiveRecord::Schema.define(version: 20171119131631) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "past_cats", force: :cascade do |t|
+    t.bigint "cat_id"
+    t.string "whereabouts"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cat_id"], name: "index_past_cats_on_cat_id"
+  end
+
+  add_foreign_key "past_cats", "cats"
 end

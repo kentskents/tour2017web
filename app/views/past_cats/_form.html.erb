@@ -1,0 +1,27 @@
+<%= form_with(model: past_cat, local: true) do |form| %>
+  <% if past_cat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(past_cat.errors.count, "error") %> prohibited this past_cat from being saved:</h2>
+
+      <ul>
+      <% past_cat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cat_id %>
+    <%= form.text_field :cat_id, id: :past_cat_cat_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :whereabouts %>
+    <%= form.text_field :whereabouts, id: :past_cat_whereabouts %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
