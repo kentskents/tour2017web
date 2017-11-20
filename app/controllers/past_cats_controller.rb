@@ -4,7 +4,7 @@ class PastCatsController < ApplicationController
   # GET /past_cats
   # GET /past_cats.json
   def index
-    @past_cats = PastCat.all
+    @past_cats = PastCat.joins(:cat)
   end
 
   # GET /past_cats/1

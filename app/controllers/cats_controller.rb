@@ -4,7 +4,7 @@ class CatsController < ApplicationController
   # GET /cats
   # GET /cats.json
   def index
-    @cats = Cat.all
+    @cats = Cat.left_joins(:past_cat).where("past_cats.id IS NULL")
   end
 
   # GET /cats/1
