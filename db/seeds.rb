@@ -1,6 +1,6 @@
 require "csv"
 
-CSV.open("cats.csv", headers: true) do |csv|
+CSV.open("./db/cats.csv", headers: true) do |csv|
   csv.each do |row|
     Cat.create(
       kind: row["kind"],
@@ -15,10 +15,10 @@ CSV.open("cats.csv", headers: true) do |csv|
   end
 end
 
-CSV.open("past_cats.csv", headers: true) do |csv|
+CSV.open("./db/past_cats.csv", headers: true) do |csv|
   csv.each do |row|
     PastCat.create(
-      cat_id: row["key"],
+      cat_id: row["cat_id"],
       whereabouts: row["whereabouts"])
   end
 end
