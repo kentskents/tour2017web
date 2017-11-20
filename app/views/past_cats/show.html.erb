@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cat:</strong>
+  <%= @past_cat.cat %>
+</p>
+
+<p>
+  <strong>Whereabouts:</strong>
+  <%= @past_cat.whereabouts %>
+</p>
+
+<%= link_to 'Edit', edit_past_cat_path(@past_cat) %> |
+<%= link_to 'Back', past_cats_path %>

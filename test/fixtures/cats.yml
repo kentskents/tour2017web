@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kind: MyString
+  sex: MyString
+  age: MyString
+  size: MyString
+  color: MyString
+  place: MyString
+  limit: 2017-11-19
+  detail: MyText
+  image: MyString
+
+two:
+  kind: MyString
+  sex: MyString
+  age: MyString
+  size: MyString
+  color: MyString
+  place: MyString
+  limit: 2017-11-19
+  detail: MyText
+  image: MyString

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kind</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Place</th>
+      <th>Limit</th>
+      <th>Detail</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cats.each do |cat| %>
+      <tr>
+        <td><%= cat.kind %></td>
+        <td><%= cat.sex %></td>
+        <td><%= cat.age %></td>
+        <td><%= cat.size %></td>
+        <td><%= cat.color %></td>
+        <td><%= cat.place %></td>
+        <td><%= cat.limit %></td>
+        <td><%= cat.detail %></td>
+        <td><%= cat.image %></td>
+        <td><%= link_to 'Show', cat %></td>
+        <td><%= link_to 'Edit', edit_cat_path(cat) %></td>
+        <td><%= link_to 'Destroy', cat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cat', new_cat_path %>

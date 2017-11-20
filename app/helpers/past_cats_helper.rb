@@ -1,0 +1,2 @@
+module PastCatsHelper
+end
